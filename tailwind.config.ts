@@ -11,7 +11,24 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#eaebe9",
+        gray: {
+          50: "#f9fafb",
+          100: "#f4f5f7",
+          200: "#e5e7eb",
+          300: "#d2d6dc",
+          400: "#9fa6b2",
+          500: "#6b7280",
+          600: "#4b5563",
+          700: "#374151",
+          800: "#252f3f",
+          900: "#161e2e",
+        },
+        black: {
+          light: "#333333",
+          DEFAULT: "#000000",
+          dark: "#0d0d0d",
+        },
+        primary: "#fff",
         secondary: "#ebebeb",
         accent: "#e8ebe7",
         light: "#ececec",
@@ -26,9 +43,15 @@ const config: Config = {
         grayShadow3: "#bfbfbf",
         grayShadow4: "#a6a6a6",
       },
+      fontFamily: {
+        sans: ["Poppins", "Helvetica", "Arial", "sans-serif"],
+      },
+      boxShadow: {
+        nav: "0px 4px 10px rgba(0, 0, 0, 0.1)",
+      },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 };
 
 export default config;
