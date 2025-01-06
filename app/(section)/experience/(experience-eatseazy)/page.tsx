@@ -5,13 +5,16 @@ import { notFound } from "next/navigation";
 import React from "react";
 
 export default async function ExperienceEatsEazy() {
-  const post = await getPostBySlug("experience-eatseazy");
+  const post = await getPostBySlug("eatseazy");
   if (!post) notFound();
 
   return (
     <div className="pe-8 ps-8 prose mx-auto">
       <MDXRemote source={post.content} />
-      <Link href={`/experiences/${post.slug}`}>
+      <Link
+        href={`/experiences/${post.url}`}
+        className="text-greenShadow4 hover:text-greenShadow3"
+      >
         Voir plus sur les missions réalisées
       </Link>
     </div>

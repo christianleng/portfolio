@@ -7,12 +7,9 @@ export default async function ExperienceDjob(props: {
 }) {
   const post = await getPost(props.params.slug);
   if (!post) notFound();
-  console.log("post;;=>", post);
 
   return (
-    <div>
-      <h1>{post.title}</h1>
-      <h1>{post.description}</h1>
+    <div className="pe-8 ps-8 prose mx-auto">
       <MDXRemote source={post.content} />
     </div>
   );

@@ -10,6 +10,8 @@
 ### À propos de Eats Eazy :
 Eats Eazy est une application innovante qui simplifie et améliore l'expérience client au restaurant. Elle permet aux utilisateurs de : 
  
+**Fonctionnement et objectifs** :
+
 - Réserver leur table à l'avance dans un restaurant partenaire.  
 - Sélectionner le nombre d'invités et les repas directement depuis l'application.  
 - Effectuer le paiement à l'avance, offrant ainsi une expérience fluide et sans attente.  
@@ -17,11 +19,32 @@ Eats Eazy est une application innovante qui simplifie et améliore l'expérience
 Fondée en 2018, la startup est basée à Station F à Paris et appartient à DISRUPTIV SAS. Sous la direction de Sarah Lasfar, CEO de Eats Eazy, l'équipe multidisciplinaire travaille pour réinventer les interactions entre clients et restaurants. L'objectif : transformer un moment souvent contraignant en une expérience simple, rapide et agréable.
 
 ### Stack technique utilisée :
-- **Front-end** : React, Redux Toolkit, @mui
+- **Front-end** : React, Redux Toolkit, @mui, React hook form
 - **Back-end** : Node.js, Sequelize, Docker
 - **Bases de données** : PostgreSQL
 
 ### Réalisations clés :
-- **Développement de nouvelles fonctionnalités** : Création de modules interactifs pour la gestion d'éléments comme le "Mur d'Impact" en React et TypeScript.
-- **Refactorisation et optimisation** : Amélioration des performances et de la maintenabilité du code, optimisation de la gestion d'état avec Zustand.
-- **Maintenance et évolution de l'interface Admin** : Prise en charge complète de la plateforme admin.
+
+- **Mise en place d'une fonctionnalité de livraison et de click-and-collect** : 
+  - Création d'une page dédiée pour le click-and-collect et la livraison, permettant aux restaurateurs de gérer ces options efficacement.
+  - Conception ergonomique de la page, avec des filtres pour trier et sélectionner les restaurants par arrondissement.
+  - Adaptation rapide aux besoins émergents des restaurateurs en pleine pandémie de Covid-19.
+
+- **Refonte backend avec GraphQL Tools** : 
+  - Migration du service backend de GraphQL Modules vers GraphQL Tools, accompagnée d'une refactorisation complète.
+  - Amélioration des performances et de la maintenabilité grâce à un package bénéficiant d'une plus grande communauté.
+  - Implémentation d'une mise à jour en temps réel pour les réservations des restaurateurs, avec tests approfondis via GraphQL Playground.
+
+- **Résolution de bugs et tests** : 
+  - Identification et correction de bugs liés aux nouvelles fonctionnalités dans l'environnement de test.
+  - Prévention des régressions avec des campagnes de tests intensifs avant la mise en production.
+
+- **Optimisation de l'architecture AWS** : 
+  - Participation à un appel avec des architectes AWS pour améliorer les services de l'application.
+  - Refonte de l'architecture AWS en incluant des services comme AWS Lambda pour réduire les coûts.
+  - Présentation de l'architecture optimisée et implémentation des recommandations obtenues.
+
+- **Collaboration et gestion des priorités** : 
+  - Organisation des tâches via Notion, en collaboration avec la CEO, pour déterminer les priorités.
+  - Adaptation aux besoins immédiats des restaurateurs et aux événements spécifiques.
+  - Communication avec les équipes et participation à des tâches stratégiques en dehors du développement pur.
