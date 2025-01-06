@@ -9,7 +9,7 @@ export default async function ExperienceDjob() {
   if (!post) notFound();
 
   return (
-    <div className="pe-8 ps-8 prose mx-auto">
+    <div className="pe-8 ps-8 prose mx-auto" id="experience">
       <MDXRemote source={post.content} />
       <Link href={`/experiences/${post.slug}`}>
         Voir plus sur les missions réalisées
