@@ -7,7 +7,7 @@ export default async function SkillsPage() {
   if (!post) notFound();
 
   return (
-    <div className="pe-8 ps-8 prose mx-auto">
+    <div className="pe-8 ps-8 prose mx-auto" id="skills">
       <MDXRemote source={post.content} />
     </div>
   );

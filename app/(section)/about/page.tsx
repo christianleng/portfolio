@@ -7,7 +7,7 @@ export default async function AboutPage() {
   if (!post) notFound();
 
   return (
-    <div className="pe-8 ps-8 prose mx-auto">
+    <div className="pe-8 ps-8 prose mx-auto" id="about">
       <MDXRemote source={post.content} />
     </div>
   );

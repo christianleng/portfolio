@@ -15,7 +15,6 @@ export default async function Home() {
       <About />
       <ExperienceDjob />
       <ExperienceEatsEazy />
-      {/* <ProjectPage /> */}
       <SkillsPage />
     </div>
   );

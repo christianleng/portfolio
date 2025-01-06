@@ -31,25 +31,40 @@ const Header = () => {
       } ${isScrolled ? "shadow-nav" : ""}`}
     >
       <div className="flex justify-between relative z-50 container mx-auto items-center gap-2 px-4 p-2">
-        <p className="text-xl sm:text-2xl md:text-3xl text-gray-800">
+        <a className="text-xl sm:text-2xl md:text-3xl text-gray-800" href="#">
           CHRISTIAN LENG
-        </p>
+        </a>
         <div className="flex gap-4 sm:gap-6 md:gap-10">
-          <p className="text-sm sm:text-base md:text-lg text-gray-400 hover:text-black-light transition duration-200 cursor-pointer">
+          <a
+            href="#"
+            className="text-sm sm:text-base md:text-lg text-gray-400 hover:text-black-light transition duration-200 cursor-pointer"
+          >
             Home
-          </p>
-          <p className="text-sm sm:text-base md:text-lg text-gray-500 hover:text-black-light transition duration-200 cursor-pointer">
+          </a>
+          <a
+            href="#about"
+            className="text-sm sm:text-base md:text-lg text-gray-500 hover:text-black-light transition duration-200 cursor-pointer"
+          >
             About
-          </p>
-          <p className="text-sm sm:text-base md:text-lg text-gray-600 hover:text-black-light transition duration-200 cursor-pointer">
+          </a>
+          <a
+            href="#experience"
+            className="text-sm sm:text-base md:text-lg text-gray-600 hover:text-black-light transition duration-200 cursor-pointer"
+          >
             Experience
-          </p>
-          <p className="text-sm sm:text-base md:text-lg text-gray-700 hover:text-black-light transition duration-200 cursor-pointer">
-            Projet
-          </p>
-          <p className="text-sm sm:text-base md:text-lg text-gray-800 hover:text-black-light transition duration-200 cursor-pointer">
+          </a>
+          <a
+            href="#skills"
+            className="text-sm sm:text-base md:text-lg text-gray-700 hover:text-black-light transition duration-200 cursor-pointer"
+          >
+            Skills
+          </a>
+          <a
+            href="#contact"
+            className="text-sm sm:text-base md:text-lg text-gray-800 hover:text-black-light transition duration-200 cursor-pointer"
+          >
             Contact
-          </p>
+          </a>
         </div>
       </div>
     </nav>
