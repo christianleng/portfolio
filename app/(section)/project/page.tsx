@@ -7,10 +7,8 @@ export default async function ProjectPage() {
   if (!post) notFound();
 
   return (
-    <div className="py-16 pe-8 ps-8 ">
-      <div className="prose mx-auto">
-        <MDXRemote source={post.content} />
-      </div>
+    <div className="pe-8 ps-8 prose mx-auto" id="project">
+      <MDXRemote source={post.content} />
     </div>
   );
 }

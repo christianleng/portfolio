@@ -1,11 +1,14 @@
 "use client";
 
+import { useRouter, usePathname } from "next/navigation";
 import React, { useState, useEffect } from "react";
 
 const Header = () => {
   const [isVisible, setIsVisible] = useState<boolean>(true);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [lastScrollY, setLastScrollY] = useState<number>(0);
+  const router = useRouter();
+  const pathname = usePathname();
 
   const handleScroll = () => {
     if (window.scrollY > lastScrollY && window.scrollY > 50) {
@@ -15,6 +18,17 @@ const Header = () => {
     }
     setIsScrolled(window.scrollY > 0);
     setLastScrollY(window.scrollY);
+  };
+
+  const handleAnchorClick = (anchor: string) => {
+    if (pathname === "/") {
+      const element = document.getElementById(anchor);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      router.push(`/#${anchor}`);
+    }
   };
 
   useEffect(() => {
@@ -31,40 +45,43 @@ const Header = () => {
       } ${isScrolled ? "shadow-nav" : ""}`}
     >
       <div className="flex justify-between relative z-50 container mx-auto items-center gap-2 px-4 p-2">
-        <a className="text-xl sm:text-2xl md:text-3xl text-gray-800" href="#">
+        <p
+          className="text-xl sm:text-2xl md:text-3xl text-gray-800 hover:cursor-pointer"
+          onClick={() => handleAnchorClick("home")}
+        >
           CHRISTIAN LENG
-        </a>
+        </p>
         <div className="flex gap-4 sm:gap-6 md:gap-10">
-          <a
-            href="#"
+          <p
             className="text-sm sm:text-base md:text-lg text-gray-400 hover:text-black-light transition duration-200 cursor-pointer"
+            onClick={() => handleAnchorClick("home")}
           >
             Home
-          </a>
-          <a
-            href="#about"
+          </p>
+          <p
             className="text-sm sm:text-base md:text-lg text-gray-500 hover:text-black-light transition duration-200 cursor-pointer"
+            onClick={() => handleAnchorClick("about")}
           >
             About
-          </a>
-          <a
-            href="#experience"
+          </p>
+          <p
             className="text-sm sm:text-base md:text-lg text-gray-600 hover:text-black-light transition duration-200 cursor-pointer"
+            onClick={() => handleAnchorClick("experience")}
           >
             Experience
-          </a>
-          <a
-            href="#skills"
+          </p>
+          {/* <p
             className="text-sm sm:text-base md:text-lg text-gray-700 hover:text-black-light transition duration-200 cursor-pointer"
+            onClick={() => handleAnchorClick("project")}
           >
-            Skills
-          </a>
-          <a
-            href="#contact"
+            Projet
+          </p> */}
+          <p
             className="text-sm sm:text-base md:text-lg text-gray-800 hover:text-black-light transition duration-200 cursor-pointer"
+            onClick={() => handleAnchorClick("contact")}
           >
             Contact
-          </a>
+          </p>
         </div>
       </div>
     </nav>

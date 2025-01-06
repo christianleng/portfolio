@@ -5,7 +5,8 @@ import matter from "gray-matter";
 
 const postSchema = z.object({
   title: z.string(),
-  description: z.string(),
+  description: z.string().optional(),
+  url: z.string().optional(),
 });
 
 type Post = z.infer<typeof postSchema> & {

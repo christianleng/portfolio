@@ -6,9 +6,9 @@ export default async function Homepage() {
   if (!post) notFound();
 
   return (
-    <div className="mt-16 flex flex-col items-center text-center relative">
+    <div className="mt-24 flex flex-col items-center text-center relative">
       <div className="absolute inset-0 -z-10 flex justify-center items-center">
-        <div className="w-[60%] h-[50%] bg-gradient-to-br from-greenShadow1 via-greenShadow2 to-greenShadow4 blur-3xl opacity-50"></div>
+        <div className="w-[60%] h-[50%] bg-gradient-to-br from-greenShadow4 via-greenShadow3 to-greenShadow4 blur-3xl opacity-50"></div>
       </div>
 
       <p className="text-7xl relative text-black z-10">{post.title}</p>
