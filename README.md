@@ -1,6 +1,6 @@
 # Portfolio de Christian Leng
 
-Bienvenue sur mon portfolio ! Ce site est construit avec **Next.js**, **Shadcn**, **TailwindCSS**, et **MDX**. Vous y trouverez une présentation de mes compétences, de mes expériences professionnelles et de mes projets personnels.
+Bienvenue sur mon portfolio ! Ce site est construit avec **Next.js**, **TailwindCSS**, et **MDX**. Vous y trouverez une présentation de mes compétences, de mes expériences professionnelles et de mes projets personnels.
 
 ## Contact
 

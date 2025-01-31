@@ -1,4 +1,3 @@
-import { Separator } from "@/components/ui/separator";
 import { getPostBySlug } from "@/lib/loadSections";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { notFound } from "next/navigation";
@@ -11,7 +10,7 @@ const Contact = async () => {
   return (
     <>
       <div className="pe-8 ps-8 prose mx-auto w-full" id="contact">
-        <Separator className="my-4 h-px bg-dark" />
+        <div className="my-4 h-px bg-dark" />
         <MDXRemote source={post.content} />
       </div>
     </>
