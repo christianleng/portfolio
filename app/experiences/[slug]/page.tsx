@@ -1,6 +1,14 @@
-import { getPost } from "@/lib/loadSections";
+import { getPost, getPosts } from "@/lib/loadSections";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
+
+export async function generateStaticParams() {
+  const posts = await getPosts();
+
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
+}
 
 export default async function ExperienceDjob(props: {
   params: { slug: string };
