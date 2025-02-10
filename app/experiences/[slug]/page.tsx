@@ -1,4 +1,4 @@
-import { getPost, getPosts } from "@/lib/loadSections";
+import { getPosts, getPost } from "../../../lib/loadSections";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 

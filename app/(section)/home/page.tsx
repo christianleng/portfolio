@@ -1,4 +1,4 @@
-import { getPostBySlug } from "@/lib/loadSections";
+import { getPostBySlug } from "../../../lib/loadSections";
 import { notFound } from "next/navigation";
 
 export default async function Homepage() {
